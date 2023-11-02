@@ -1,25 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: davidro2 <davidro2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 12:33:33 by davidro2          #+#    #+#             */
-/*   Updated: 2023/11/02 15:11:32 by davidro2         ###   ########.fr       */
+/*   Created: 2023/11/02 12:53:25 by davidro2          #+#    #+#             */
+/*   Updated: 2023/11/02 15:05:32 by davidro2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include "libft/libft.h"
-# include <stdarg.h>
-# include <unistd.h>
-# include <stdio.h>
+int   ft_putstr(char *str)
+{
+    int i;
 
-int    ft_putchar(char c);
+    i = 0;
+    if (str)
+    {
+        while (str[i])
+        {
+            write(1, &str[i], 1);
+            i++;
+        }
+    }
+    return (i);
+}
 
-int   ft_putstr(char *str);
+// int main()
+// {
+//     char *str = "onepiece";
 
-#endif
+//     ft_putstr(str);
+// }

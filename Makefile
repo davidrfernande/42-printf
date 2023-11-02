@@ -3,16 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: davidro2 <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: davidro2 <davidro2@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/31 11:52:41 by davidro2          #+#    #+#              #
-#    Updated: 2023/10/31 11:52:45 by davidro2         ###   ########.fr        #
+#    Updated: 2023/11/02 15:10:29 by davidro2         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
 SRC = \
+	ft_putchar.c ft_putstr.c
 
 OBJS = $(SRC:.c=.o)
 
