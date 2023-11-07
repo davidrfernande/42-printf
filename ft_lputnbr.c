@@ -6,7 +6,7 @@
 /*   By: davidro2 <davidro2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 17:15:30 by david             #+#    #+#             */
-/*   Updated: 2023/11/07 12:45:32 by davidro2         ###   ########.fr       */
+/*   Updated: 2023/11/07 14:35:43 by davidro2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,5 +79,5 @@ int ft_lputnbr(long nb)
 
 // int main()
 // {
-//     printf("%d", ft_lputnbr(-1234));
+//     printf("sdfghjkl;';ytrtyuiop[ %d wertyuiopoiuytrertyuiop", ft_lputnbr(-1234));
 // }
