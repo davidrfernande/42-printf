@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_lputnbr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
+/*   By: davidro2 <davidro2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 17:15:30 by david             #+#    #+#             */
-/*   Updated: 2023/11/07 00:19:05 by david            ###   ########.fr       */
+/*   Updated: 2023/11/07 12:45:32 by davidro2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int  ft_intlen(int n)
+static int  ft_intlen(long n)
 {
     int len;
     int nr;
@@ -36,10 +36,10 @@ static int  ft_intlen(int n)
     }
     return (len);
 }
-char    *ft_itoa(int n)
+char    *ft_litoa(long n)
 {
 	unsigned int len;
-    unsigned int nr;
+    unsigned long nr;
     char    *str;
 
     len = ft_intlen(n);
@@ -65,7 +65,19 @@ char    *ft_itoa(int n)
     return (str);
 }
 
+int ft_lputnbr(long nb)
+{
+    char *temp;
+    int len;
+    
+    temp = ft_litoa(nb);
+    len = ft_strlen(temp);
+    ft_putstr(temp);
+    free(temp);
+    return (len);
+}
+
 // int main()
 // {
-//     ft_itoa(-1234);
+//     printf("%d", ft_lputnbr(-1234));
 // }

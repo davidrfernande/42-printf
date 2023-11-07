@@ -6,14 +6,14 @@
 #    By: davidro2 <davidro2@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/31 11:52:41 by davidro2          #+#    #+#              #
-#    Updated: 2023/11/02 15:10:29 by davidro2         ###   ########.fr        #
+#    Updated: 2023/11/07 12:44:20 by davidro2         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
 SRC = \
-	ft_putchar.c ft_putstr.c
+	ft_putchar.c ft_putstr.c ft_strlen.c ft_lputnbr.c
 
 OBJS = $(SRC:.c=.o)
 
@@ -23,10 +23,10 @@ CC = cc
 
 CCFLAGS = -Wall -Werror -Wextra
 
-all:	%(NAME)
+all:	$(NAME)
 
-%(NAME):	%(OBJS)
-			ar rsc %(NAME) %(OBJS)
+$(NAME):	$(OBJS)
+			ar rsc $(NAME) $(OBJS)
 
 clean:
 			$(RM) $(OBJS)
@@ -36,4 +36,4 @@ fclean:		clean
 
 re:			fclean all
 
-.PHONY all clean fclan re
+.PHONY: all clean fclan re
