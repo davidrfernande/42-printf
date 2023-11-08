@@ -3,12 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_format.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davidro2 <davidro2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 14:45:29 by davidro2          #+#    #+#             */
-/*   Updated: 2023/11/07 14:45:38 by davidro2         ###   ########.fr       */
+/*   Updated: 2023/11/08 15:24:41 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
+char    *ft_print_format(char c)
+{
+    if (c == )
+}
