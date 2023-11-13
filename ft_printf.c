@@ -12,31 +12,31 @@
 
 #include "ft_printf.h"
 
-int ft_printf(const char *str, ...)
+int	ft_printf(const char *str, ...)
 {
-    va_list args;
-    int     counter;
-    int     i;
+	va_list	args;
+	int		counter;
+	int		i;
 
-    i = 0;
-    counter = 0;
-    va_start(args, str);
-    while (str[i])
-    {
-        if (str[i] == '%' && ft_strrchr("cspdiuxX%", str[i + 1]))
-        {
-            i++;
-            counter += ft_print_format(str[i], args, counter);
-            continue;
-        }            
-        write(1, &str[i], 1);
-        counter++;
-        i++;
-    }    
-    va_end(args);
-    return(counter);
+	i = 0;
+	counter = 0;
+	va_start(args, str);
+	while (str[i])
+	{
+		if (str[i] == '%' && ft_strrchr("cspdiuxX%", str[i + 1]))
+		{
+			i++;
+			counter += ft_print_format(str[i], args, counter);
+			continue ;
+		}
+		write(1, &str[i], 1);
+		counter++;
+		i++;
+	}
+	va_end(args);
+	return (counter);
 }
-int main()
+int	main(void)
 {
-    printf("obenficaeomaiordomundocrlh %s BENFICA", "ola");
+	printf("obenficaeomaiordomundocrlh %s BENFICA", "ola");
 }

@@ -12,12 +12,11 @@
 
 #include "ft_printf.h"
 
-int ft_vdtohex(void *arg)
+int	ft_vdtohex(void *arg)
 {
-    int i;
-    char    *str;
+	int i;
+	char *str;
 
-    i = 0;
-    str = (unsigned char)arg;
-    
+	i = 0;
+	str = (unsigned char)arg;
 }

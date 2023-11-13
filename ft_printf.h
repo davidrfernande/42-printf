@@ -13,20 +13,20 @@
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
+# include "libft/libft.h"
 # include <stdarg.h>
-# include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
-# include "libft/libft.h"
+# include <unistd.h>
 
-int ft_putchar(char c);
+int	ft_putchar(char c);
 
-int ft_putstr(char *str);
+int	ft_putstr(char *str);
 
-int ft_strlen(char *str);
+int	ft_strlen(char *str);
 
-int ft_lputnbr(long nb);
+int	ft_lputnbr(long nb);
 
-int ft_print_format(char c, va_list arg, int counter);
+int	ft_print_format(char c, va_list arg, int counter);
 
 #endif
