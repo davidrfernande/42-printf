@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 17:15:30 by david             #+#    #+#             */
-/*   Updated: 2023/11/13 18:15:53 by david            ###   ########.fr       */
+/*   Updated: 2023/11/13 18:18:28 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,8 +71,8 @@ int	ft_putnbr_pf(long nb)
 	int		len;
 
 	temp = ft_litoa(nb);
-	len = ft_strlen(temp);
-	ft_putstr(temp);
+	len = ft_strlen_pf(temp);
+	ft_putstr_pf(temp);
 	free(temp);
 	return (len);
 }
