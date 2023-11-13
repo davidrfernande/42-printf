@@ -3,33 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_format.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
+/*   By: davidro2 <davidro2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 14:45:29 by davidro2          #+#    #+#             */
-/*   Updated: 2023/11/10 17:43:09 by david            ###   ########.fr       */
+/*   Updated: 2023/11/13 16:28:15 by davidro2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
-char    *ft_print_format(char c)
+int ft_print_format(char c, va_list arg, int counter)
 {
     if (c == 'c')
-        ft_putchar(c);
-    if (c == 's')
-        ft_putstr();
-    if (c == 'p')
+        return (counter += ft_putchar(va_arg(arg, int)));
+    else if (c == 's')
+        return (counter += ft_putstr(va_arg(arg, char *)));
+    else if (c == 'p')
         ft_
-    if (c == 'd')
-        ft_lputnbr();
-    if (C == 'i')
-        ft_lputnbr();
-    if (c == 'u')
-        ft_lputnbr();
-    if (c == 'x')
+    else if (c == 'd' || c == 'i' || c == 'u')
+        return (counter += ft_lputnbr(va_arg(arg, int)));
+    else if (c == 'x')
         ft_
-    if (c == 'X')
+    else if (c == 'X')
         ft_
-    if (c == '%')
-        ft_
+    else if (c == '%')
+        return (counter += ft_putchar('%'));
+    return (counter);
 }

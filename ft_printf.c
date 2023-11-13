@@ -6,7 +6,7 @@
 /*   By: davidro2 <davidro2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 12:33:10 by davidro2          #+#    #+#             */
-/*   Updated: 2023/11/07 14:44:56 by davidro2         ###   ########.fr       */
+/*   Updated: 2023/11/13 15:53:50 by davidro2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ int ft_printf(const char *str, ...)
     va_start(args, str);
     while (str[i])
     {
-        if (str[i] == '%')
+        if (str[i] == '%' && ft_strrchr("cspdiuxX%", str[i + 1]))
         {
             i++;
-            counter += ft_print_format(str[i]);
+            counter += ft_print_format(str[i], args, counter);
             continue;
         }            
         write(1, &str[i], 1);
@@ -35,4 +35,8 @@ int ft_printf(const char *str, ...)
     }    
     va_end(args);
     return(counter);
+}
+int main()
+{
+    printf("obenficaeomaiordomundocrlh %s BENFICA", "ola");
 }

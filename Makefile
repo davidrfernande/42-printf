@@ -6,7 +6,7 @@
 #    By: davidro2 <davidro2@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/31 11:52:41 by davidro2          #+#    #+#              #
-#    Updated: 2023/11/07 12:44:20 by davidro2         ###   ########.fr        #
+#    Updated: 2023/11/13 15:15:54 by davidro2         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,10 +23,14 @@ CC = cc
 
 CCFLAGS = -Wall -Werror -Wextra
 
+LIBFT = libft
+
 all:	$(NAME)
 
 $(NAME):	$(OBJS)
 			ar rsc $(NAME) $(OBJS)
+			cp libft/libft.a .
+			mv libft.a $(NAME)
 
 clean:
 			$(RM) $(OBJS)
