@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_vdtohx.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davidro2 <davidro2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 16:49:35 by davidro2          #+#    #+#             */
-/*   Updated: 2023/11/13 16:51:36 by davidro2         ###   ########.fr       */
+/*   Updated: 2023/11/13 18:14:46 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_vdtohex(void *arg)
+int	ft_vdtohex_pf(void *arg)
 {
 	int i;
 	char *str;

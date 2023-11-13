@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lputnbr.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_pf.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davidro2 <davidro2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 17:15:30 by david             #+#    #+#             */
-/*   Updated: 2023/11/07 14:35:43 by davidro2         ###   ########.fr       */
+/*   Updated: 2023/11/13 18:15:53 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ char	*ft_litoa(long n)
 	return (str);
 }
 
-int	ft_lputnbr(long nb)
+int	ft_putnbr_pf(long nb)
 {
 	char	*temp;
 	int		len;
