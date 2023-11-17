@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 12:33:10 by davidro2          #+#    #+#             */
-/*   Updated: 2023/11/13 18:01:00 by david            ###   ########.fr       */
+/*   Updated: 2023/11/17 00:04:21 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	ft_printf(const char *str, ...)
 	return (counter);
 }
 
-int	main(void)
-{
-	printf("BENFICA %s BENFICA", "ola");
-}
+// int	main(void)
+// {
+// 	printf("BENFICA %s BENFICA", "ola");
+// }

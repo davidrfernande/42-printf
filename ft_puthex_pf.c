@@ -12,4 +12,4 @@
 
 #include "ft_printf.h"
 
-int ft_puthex_pf(  )
+int	ft_puthex_pf(void)

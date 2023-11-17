@@ -80,5 +80,5 @@ int	ft_putnbr_pf(long nb)
 // int main()
 // {
 //     printf("sdfghjkl;';ytrtyuiop[ %d wertyuiopoiuytrertyuiop",
-	// ft_lputnbr(-1234));
+// ft_lputnbr(-1234));
 // }
