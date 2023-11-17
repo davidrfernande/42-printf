@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_vdtohx.c                                        :+:      :+:    :+:   */
+/*   ft_strlen_pf.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davidro2 <davidro2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/13 16:49:35 by davidro2          #+#    #+#             */
-/*   Updated: 2023/11/13 16:51:36 by davidro2         ###   ########.fr       */
+/*   Created: 2023/11/07 12:40:15 by davidro2          #+#    #+#             */
+/*   Updated: 2023/11/17 00:04:01 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "printf.h"
 
-int ft_vdtohex(void *arg)
+int	ft_strlen_pf(char *str)
 {
-    int i;
-    char    *str;
+	int	i;
 
-    i = 0;
-    str = (unsigned char)arg;
-    
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }

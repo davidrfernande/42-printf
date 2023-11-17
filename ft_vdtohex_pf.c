@@ -1,36 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                     :+:      :+:    :+:   */
+/*   ft_vdtohx.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davidro2 <davidro2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 12:53:25 by davidro2          #+#    #+#             */
-/*   Updated: 2023/11/02 15:05:32 by davidro2         ###   ########.fr       */
+/*   Created: 2023/11/13 16:49:35 by davidro2          #+#    #+#             */
+/*   Updated: 2023/11/13 18:14:46 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int   ft_putstr(char *str)
+int	ft_vdtohex_pf(void *arg)
 {
-    int i;
+	int i;
+	char *str;
 
-    i = 0;
-    if (str)
-    {
-        while (str[i])
-        {
-            write(1, &str[i], 1);
-            i++;
-        }
-    }
-    return (i);
+	i = 0;
+	str = (unsigned char)arg;
 }
-
-// int main()
-// {
-//     char *str = "onepiece";
-
-//     ft_putstr(str);
-// }

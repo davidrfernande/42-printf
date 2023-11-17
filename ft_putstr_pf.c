@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                   :+:      :+:    :+:   */
+/*   ft_putstr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: davidro2 <davidro2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 12:46:08 by davidro2          #+#    #+#             */
-/*   Updated: 2023/11/02 12:48:27 by davidro2         ###   ########.fr       */
+/*   Created: 2023/11/02 12:53:25 by davidro2          #+#    #+#             */
+/*   Updated: 2023/11/02 15:05:32 by davidro2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int    ft_putchar(char c)
+int	ft_putstr_pf(char *str)
 {
-    write(1, &c, 1);
-    return (1);
+	int	i;
+
+	i = 0;
+	if (!str)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
+	while (str[i])
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
+	return (i);
 }
 
 // int main()
 // {
-//     char c = 'd';
+//     char *str = "onepiece";
 
-//     ft_putchar(c);
+//     ft_putstr(str);
 // }
