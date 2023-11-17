@@ -1,39 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_pf.c                                     :+:      :+:    :+:   */
+/*   ft_uputnbr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: davidro2 <davidro2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 17:15:30 by david             #+#    #+#             */
-/*   Updated: 2023/11/17 15:27:04 by davidro2         ###   ########.fr       */
+/*   Updated: 2023/11/17 15:29:12 by davidro2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_intlen(long n)
+static int	ft_intlen(unsigned int n)
 {
 	int	len;
-	int	nr;
 
 	len = 0;
-	nr = n;
-	if (nr == 0)
+	if (n == 0)
 		len++;
-	if (nr < 0)
+	while (n != 0)
 	{
-		nr = -nr;
-		len++;
-	}
-	while (nr != 0)
-	{
-		nr = nr / 10;
+		n = n / 10;
 		len++;
 	}
 	return (len);
 }
-char	*ft_litoa(long n)
+
+static char	*ft_litoa(unsigned int n)
 {
 	unsigned int	len;
 	unsigned long	nr;
@@ -43,38 +37,29 @@ char	*ft_litoa(long n)
 	str = (char *)malloc((len + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
-	if (n < 0)
-	{
-		str[0] = '-';
-		nr = -n;
-	}
-	else
-		nr = n;
-	if (nr == 0)
+	if (n == 0)
 		str[0] = '0';
 	str[len] = '\0';
-	while (nr != 0)
+	while (n != 0)
 	{
-		str[len - 1] = (nr % 10) + 48;
-		nr = nr / 10;
+		str[len - 1] = (n % 10) + 48;
+		n = n / 10;
 		len--;
 	}
 	return (str);
 }
 
-int	ft_putnbr_pf(long nb)
+int	ft_uputnbr_pf(unsigned int nb)
 {
 	char	*temp;
-	int		len;
 
 	temp = ft_litoa(nb);
-	len = ft_strlen_pf(temp);
 	ft_putstr_pf(temp);
 	free(temp);
-	return (len);
+	return (ft_intlen(nb));
 }
 
 // int main()
 // {
-//     printf("\ncharacters printed:%d", ft_putnbr_pf(-99));
+//     printf("\ncharacters printed:%u", ft_uputnbr_pf(-1));
 // }

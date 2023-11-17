@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
+/*   By: davidro2 <davidro2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 12:33:10 by davidro2          #+#    #+#             */
-/*   Updated: 2023/11/17 00:04:21 by david            ###   ########.fr       */
+/*   Updated: 2023/11/17 14:17:43 by davidro2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ int	ft_printf(const char *str, ...)
 		if (str[i] == '%' && ft_strrchr("cspdiuxX%", str[i + 1]))
 		{
 			i++;
-			counter += ft_print_format(str[i], args, counter);
+			counter = ft_print_format(str[i], args, counter);
+			i++;
 			continue ;
 		}
 		write(1, &str[i], 1);

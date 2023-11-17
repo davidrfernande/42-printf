@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
+/*   By: davidro2 <davidro2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 12:33:33 by davidro2          #+#    #+#             */
-/*   Updated: 2023/11/17 00:01:41 by david            ###   ########.fr       */
+/*   Updated: 2023/11/17 15:23:03 by davidro2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ int	ft_putstr_pf(char *str);
 int	ft_strlen_pf(char *str);
 
 int	ft_putnbr_pf(long nb);
+
+int	ft_uputnbr_pf(unsigned int nb);
 
 int	ft_print_format(char c, va_list arg, int counter);
 
