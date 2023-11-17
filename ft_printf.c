@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davidro2 <davidro2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 12:33:10 by davidro2          #+#    #+#             */
-/*   Updated: 2023/11/17 14:17:43 by davidro2         ###   ########.fr       */
+/*   Updated: 2023/11/17 19:01:53 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,5 @@ int	ft_printf(const char *str, ...)
 // int	main(void)
 // {
 // 	printf("BENFICA %s BENFICA", "ola");
+// 	ft_printf("BENFICA %s BENFICA", "ola");
 // }
