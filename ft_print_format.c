@@ -6,7 +6,7 @@
 /*   By: davidro2 <davidro2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 16:15:25 by david             #+#    #+#             */
-/*   Updated: 2023/11/17 16:16:46 by davidro2         ###   ########.fr       */
+/*   Updated: 2023/11/17 16:17:07 by davidro2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_print_format(char c, va_list arg, int counter)
 	else if (c == 'u')
 		return (counter += ft_uputnbr_pf(va_arg(arg, unsigned int)));
 	else if (c == 'x')
-		return (counter += );
+		return (counter);
 	else if (c == '%')
 		return (counter += ft_putchar_pf('%'));
 	return (counter);
