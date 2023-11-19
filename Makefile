@@ -6,7 +6,7 @@
 #    By: david <david@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/31 11:52:41 by davidro2          #+#    #+#              #
-#    Updated: 2023/11/18 23:55:54 by david            ###   ########.fr        #
+#    Updated: 2023/11/19 22:10:54 by david            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libftprintf.a
 
 SRC = \
 	ft_putchar_pf.c ft_putstr_pf.c ft_strlen_pf.c ft_putnbr_pf.c \
-	ft_print_format.c  ft_printf.c ft_uputnbr.c ft_puthex_pf.c  \
+	ft_print_format.c  ft_printf.c ft_uputnbr.c ft_puthex_pf.c  
 
 OBJS = $(SRC:.c=.o)
 
