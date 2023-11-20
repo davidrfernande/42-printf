@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_format.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
+/*   By: davidro2 <davidro2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 16:15:25 by david             #+#    #+#             */
-/*   Updated: 2023/11/19 23:33:43 by david            ###   ########.fr       */
+/*   Updated: 2023/11/20 13:48:14 by davidro2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@ int	ft_print_format(char c, va_list arg, int counter)
 		return (counter += ft_putchar_pf(va_arg(arg, int)));
 	else if (c == 's')
 		return (counter += ft_putstr_pf(va_arg(arg, char *)));
-	else  if (c == 'p')
-		return (counter += ft_vdtohex_pf(va_arg(arg, void *)));
+	// else  if (c == 'p')
+	// 	return (counter += ft_vdtohex_pf(va_arg(arg, void *)));
 	else if (c == 'd' || c == 'i' )
 		return (counter += ft_putnbr_pf(va_arg(arg, int)));
 	else if (c == 'u')
 		return (counter += ft_uputnbr_pf(va_arg(arg, unsigned int)));
 	else if (c == 'x' || c == 'X')
-		return (counter += ft_puthex_pf(va_arg(arg, int), c));
+		return (counter += ft_puthex_pf(va_arg(arg, unsigned int), c));
 	else if (c == '%')
 		return (counter += ft_putchar_pf('%'));
 	return (counter);

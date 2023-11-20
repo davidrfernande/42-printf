@@ -3,36 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   ft_puthex_pf.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
+/*   By: davidro2 <davidro2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 18:01:24 by david             #+#    #+#             */
-/*   Updated: 2023/11/19 23:28:53 by david            ###   ########.fr       */
+/*   Updated: 2023/11/20 13:45:00 by davidro2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int  ft_lowhex(unsigned int n, char *base, int counter)
+static int  ft_lowhex(unsigned long long n, char *base, int counter)
 {
     if(n >= 16)
     {
-        ft_lowhex(n / 16, base, counter);
+        counter += ft_lowhex(n / 16, base, counter);
     }
     write(1, &base[n % 16], 1);
-    return (counter + 1);
+    counter++;
+    return (counter);
 }
 
-static int  ft_uphex(unsigned int n, char *base, int counter)
+static int  ft_uphex(unsigned long long n, char *base, int counter)
 {
     if(n >= 16)
     {
-        ft_uphex(n / 16, base, counter);
+        counter += ft_uphex(n / 16, base, counter);
     }
     write(1, &base[n % 16], 1);
-    return (counter + 1);
+    counter++;
+    return (counter);
 }
 
-int	ft_puthex_pf(int n, char c)
+int	ft_puthex_pf(unsigned long long n, char c)
 {
     char    *base;
     int     counter;
@@ -51,8 +53,9 @@ int	ft_puthex_pf(int n, char c)
     return (counter);
 }
 
-int main()
-{
-    // ft_puthex_pf(0, 'x');
-    printf("%x", 0);
-}
+// int main()
+// {
+//     ft_puthex_pf(159, 'x');
+//     write(1, "\n", 1);
+//     printf("%x", 159);
+// }
