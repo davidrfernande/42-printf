@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 16:49:35 by davidro2          #+#    #+#             */
-/*   Updated: 2023/11/20 17:22:55 by david            ###   ########.fr       */
+/*   Updated: 2023/11/20 23:34:09 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ int	ft_vdtohex_pf(unsigned long int ptr)
 	return (counter);
 }
 
-// int main()
-// {
-//     ft_vdtohex_pf(-1);
-//     write(1, "\n", 1);
-//     // printf("%p", -1);
-// }
+int main()
+{
+    ft_vdtohex_pf(-1);
+    write(1, "\n", 1);
+    printf("%p", -1);
+}
