@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_puthex_pf.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davidro2 <davidro2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 18:01:24 by david             #+#    #+#             */
-/*   Updated: 2023/11/20 13:45:00 by davidro2         ###   ########.fr       */
+/*   Updated: 2023/11/20 16:55:50 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ static int	ft_lowhex(unsigned long long n, char *base, int counter)
 		counter += ft_lowhex(n / 16, base, counter);
 	}
 	write(1, &base[n % 16], 1);
-	counter++;
-	return (counter);
+	return (counter + 1);
 }
 
 static int	ft_uphex(unsigned long long n, char *base, int counter)
@@ -30,8 +29,7 @@ static int	ft_uphex(unsigned long long n, char *base, int counter)
 		counter += ft_uphex(n / 16, base, counter);
 	}
 	write(1, &base[n % 16], 1);
-	counter++;
-	return (counter);
+	return (counter + 1);
 }
 
 int	ft_puthex_pf(unsigned long long n, char c)
