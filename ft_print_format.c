@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_format.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davidro2 <davidro2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 16:15:25 by david             #+#    #+#             */
-/*   Updated: 2023/11/20 14:00:45 by davidro2         ###   ########.fr       */
+/*   Updated: 2023/11/20 16:44:21 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ int	ft_print_format(char c, va_list arg, int counter)
 		return (counter += ft_putchar_pf(va_arg(arg, int)));
 	else if (c == 's')
 		return (counter += ft_putstr_pf(va_arg(arg, char *)));
-	else  if (c == 'p')
-		return (counter += ft_vdtohex_pf(va_arg(arg, void *)));
-	else if (c == 'd' || c == 'i' )
+	else if (c == 'p')
+		return (counter += ft_vdtohex_pf(va_arg(arg, unsigned long long int)));
+	else if (c == 'd' || c == 'i')
 		return (counter += ft_putnbr_pf(va_arg(arg, int)));
 	else if (c == 'u')
 		return (counter += ft_uputnbr_pf(va_arg(arg, unsigned int)));

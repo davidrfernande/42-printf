@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 17:15:30 by david             #+#    #+#             */
-/*   Updated: 2023/11/19 23:16:57 by david            ###   ########.fr       */
+/*   Updated: 2023/11/20 16:45:18 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ static int	ft_intlen(long n)
 	}
 	return (len);
 }
+
 char	*ft_litoa(long n)
 {
 	unsigned int	len;
