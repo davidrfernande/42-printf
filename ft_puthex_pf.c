@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 18:01:24 by david             #+#    #+#             */
-/*   Updated: 2023/11/20 23:31:49 by david            ###   ########.fr       */
+/*   Updated: 2023/11/21 22:12:59 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,11 @@ int	ft_puthex_pf(unsigned long long n, char c)
 	return (counter);
 }
 
-int main()
-{
-    ft_puthex_pf(15, 'x');
-    write(1, "\n", 1);
-    printf("%x", 15);
-}
+// int main()
+// {
+// 	int x = -1;
+// 	int *ptr = &x;
+//     ft_puthex_pf(ptr), 'x');
+//     write(1, "\n", 1);
+//     printf("%p", ptr);
+// }
