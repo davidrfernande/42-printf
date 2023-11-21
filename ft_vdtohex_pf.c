@@ -6,13 +6,13 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 16:49:35 by davidro2          #+#    #+#             */
-/*   Updated: 2023/11/21 22:25:07 by david            ###   ########.fr       */
+/*   Updated: 2023/11/21 23:17:09 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_vdtohex_pf(unsigned long ptr)
+int	ft_vdtohex_pf(unsigned long int ptr)
 {
 	int	counter;
 
@@ -27,9 +27,9 @@ int	ft_vdtohex_pf(unsigned long ptr)
 	return (counter);
 }
 
-int main()
-{
-	int x = 15;
-	void	*ptr = (void *)&x;
-    printf("%p", ptr);
-}
+// int main()
+// {
+// 	int x = 15;
+// 	void	*ptr = (void *)&x;
+//     printf("%p", ptr);
+// }

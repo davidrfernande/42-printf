@@ -6,13 +6,13 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 18:01:24 by david             #+#    #+#             */
-/*   Updated: 2023/11/21 22:12:59 by david            ###   ########.fr       */
+/*   Updated: 2023/11/21 23:18:15 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_lowhex(unsigned long long n, char *base, int counter)
+static int	ft_lowhex(unsigned long n, char *base, int counter)
 {
 	if (n >= 16)
 	{
@@ -22,7 +22,7 @@ static int	ft_lowhex(unsigned long long n, char *base, int counter)
 	return (counter + 1);
 }
 
-static int	ft_uphex(unsigned long long n, char *base, int counter)
+static int	ft_uphex(unsigned long n, char *base, int counter)
 {
 	if (n >= 16)
 	{
@@ -32,7 +32,7 @@ static int	ft_uphex(unsigned long long n, char *base, int counter)
 	return (counter + 1);
 }
 
-int	ft_puthex_pf(unsigned long long n, char c)
+int	ft_puthex_pf(unsigned long n, char c)
 {
 	char	*base;
 	int		counter;
@@ -53,9 +53,7 @@ int	ft_puthex_pf(unsigned long long n, char c)
 
 // int main()
 // {
-// 	int x = -1;
-// 	int *ptr = &x;
-//     ft_puthex_pf(ptr), 'x');
+//     ft_puthex_pf(-1, 'x');
 //     write(1, "\n", 1);
-//     printf("%p", ptr);
+//     printf("original: %x", -1);
 // }
