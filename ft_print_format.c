@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 16:15:25 by david             #+#    #+#             */
-/*   Updated: 2023/11/21 23:28:33 by david            ###   ########.fr       */
+/*   Updated: 2023/11/22 18:40:31 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_print_format(char c, va_list arg, int counter)
 	else if (c == 's')
 		return (counter += ft_putstr_pf(va_arg(arg, char *)));
 	else if (c == 'p')
-		return (counter += ft_vdtohex_pf((long unsigned int)va_arg(arg, long)));
+		return (counter += ft_vdtohex_pf(va_arg(arg, unsigned long int)));
 	else if (c == 'd' || c == 'i')
 		return (counter += ft_putnbr_pf(va_arg(arg, int)));
 	else if (c == 'u')
